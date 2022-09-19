@@ -11,9 +11,9 @@ Business Layer : Data Access tarafında projeye çekilmiş olan veriler bu katma
 Presentation Layer-UI- User Interface: Sunum katmanı(MvcProjeKampi yazan kısım) <p>
     
 <h3>Tablolarımız:</h3> <p>
-   &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Heading<p> 
-   &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Content <p>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Writer <p>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Heading<p> 
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Content <p>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Writer <p>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact <p>
-   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;About <p>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About <p>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Category<p>
