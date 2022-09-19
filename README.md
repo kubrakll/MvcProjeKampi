@@ -11,9 +11,9 @@
     Presentation Layer-UI- User Interface: Sunum katmanı(MvcProjeKampi yazan kısım) <p>
     
 <h3>Tablolarımız:</h3> <p>
-    Heading<p> 
-    Content <p>
-    Writer <p>
-    Contact <p>
-    About <p>
-    Category<p>
+   &nbsp;&nbsp; Heading<p> 
+   &nbsp;&nbsp; Content <p>
+   &nbsp;&nbsp; Writer <p>
+   &nbsp;&nbsp; Contact <p>
+   &nbsp;&nbsp;  About <p>
+   &nbsp;&nbsp; Category<p>
