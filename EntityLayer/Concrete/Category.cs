@@ -13,5 +13,11 @@ namespace EntityLayer.Concrete
         public string CategoryDescription { get; set; }
         public bool CategoryStatus { get; set; }
 
+        //İlişki kurmak
+        //ICollection<İlişki kurulacak sınıf adı>
+
+        //İlişkilendirme
+        public ICollection<Heading> Headings { get; set; }
+
     }
 }
