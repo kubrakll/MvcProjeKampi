@@ -1,5 +1,4 @@
 # MvcProjeKampi
-<h1>Proje Temelinin Atılması: </h1>
 <h3>Proje dosyası oluşturma </h3><p>
   &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ASP.NET Web Application(.NET Framework) seçilir.<p>
   &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Gelen adımda MVC şablonu seçilir ve ismine MvcProjeKampi yazılır.(Sunum katmanımız istenirse sonuna UI eklenebilir.)<p>
