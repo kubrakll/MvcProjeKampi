@@ -8,7 +8,7 @@
 <p>Entity Layer  <p>
 DataAccess Layer <p>
 Business Layer  <p>
-Presentation Layer-UI- User Interface: Sunum katmanı <p>
+Presentation Layer-UI- User Interface <p>
     
 <h3>Tablolarımız:</h3> <p>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Heading<p> 
