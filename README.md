@@ -1,5 +1,5 @@
 # MvcProjeKampi
-Adım Adım Proje Temelinin Atılması: <p>
+<h1>Adım Adım Proje Temelinin Atılması: </h1>
 1.Adım: Proje dosyası oluşturma <p>
   ASP.NET Web Application(.NET Framework) seçilir.<p>
   Gelen adımda MVC şablonu seçilir ve ismine MvcProjeKampi yazılır.(Sunum katmanımız istenirse sonuna UI eklenebilir.)<p>
