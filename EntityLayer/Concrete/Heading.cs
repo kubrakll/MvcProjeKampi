@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +11,15 @@ namespace EntityLayer.Concrete
     {
         // property tanımlıyoruz.
         //veritabanına yansıcak sütun kısımlarımız
-        
+
+
+        [Key]
         public int HeadingID { get; set; }
+
+        [StringLength(50)]
         public string HeadingName { get; set; }
+
+        //Tarihleri kısıtlamıyoruz.
         public DateTime HeadingDate { get; set; }
 
         //İlişkilendirme
