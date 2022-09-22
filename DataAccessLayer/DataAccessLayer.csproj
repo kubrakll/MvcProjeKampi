@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\ICategoryDal.cs" />
+    <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Conctete\Context.cs" />
     <Compile Include="Conctete\Repositories\CategoryRepository.cs" />
     <Compile Include="Migrations\202209200750527_mig1.cs" />
