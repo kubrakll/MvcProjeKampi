@@ -12,33 +12,43 @@ namespace DataAccessLayer.Conctete.Repositories
     public class GenericRepository<T> : IRepository<T> where T : class
     {
 
-        Context c=new Context();
+
+        Context c = new Context();
         DbSet<T> _object;
 
 
+
+        //Yapıcı metot tanımlanmalı 
+        public GenericRepository()
+        {
+            _object = c.Set<T>();  //dışardan gelen t değeri objenin üzerine aldık
+        }
+
         public void Delete(T p)
         {
-            throw new NotImplementedException();
+            _object.Remove(p);
+            c.SaveChanges();
         }
 
         public void Insert(T p)
         {
-            throw new NotImplementedException();
+            _object.Add(p);
+            c.SaveChanges();
         }
 
         public List<T> List()
         {
-            throw new NotImplementedException();
+            return _object.ToList();
         }
 
         public List<T> List(Expression<Func<T, bool>> filter)
         {
-            throw new NotImplementedException();
+            return _object.Where(filter).ToList();
         }
 
         public void Update(T p)
         {
-            throw new NotImplementedException();
+            c.SaveChanges();
         }
     }
 }
