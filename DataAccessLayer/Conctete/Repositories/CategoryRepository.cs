@@ -21,6 +21,11 @@ namespace DataAccessLayer.Conctete.Repositories
             c.SaveChanges();
         }
 
+        public Category Get(Expression<Func<Category, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Insert(Category p) //Add ekleme
         {
             _object.Add(p);
