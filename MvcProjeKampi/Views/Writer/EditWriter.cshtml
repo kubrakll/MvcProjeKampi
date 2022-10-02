@@ -14,31 +14,35 @@
         <br />
         @Html.Label("Yazar Adı")
         @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.WriterName)
+        <div id="error" style="color:red">@Html.ValidationMessageFor(x => x.WriterName)</div>
         <br />
         @Html.Label("Yazar Soyadı")
         @Html.TextBoxFor(x => x.WriterSurName, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.WriterSurName)
+        <div id="error" style="color:red"> @Html.ValidationMessageFor(x => x.WriterSurName)</div>
 
         <br />
         @Html.Label("Yazar Mail")
         @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.WriterMail)
+        <div id="error" style="color:red">@Html.ValidationMessageFor(x => x.WriterMail)</div>
         <br />
         @Html.Label("Yazar Şifresi")
         @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.WriterPassword)
+        <div id="error" style="color:red">@Html.ValidationMessageFor(x => x.WriterPassword)</div>
         <br />
         @Html.Label("Yazar Görsel Linki")
         @Html.TextBoxFor(x => x.WriterImage, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.WriterImage)
+        <div id="error" style="color:red">@Html.ValidationMessageFor(x => x.WriterImage)</div>
+        <br />
+        @Html.Label("Yazar Ünvanı")
+        @Html.TextBoxFor(x => x.WriterTitle, new { @class = "form-control" })
+        <div id="error" style="color:red">@Html.ValidationMessageFor(x => x.WriterTitle)</div>
         <br />
         @Html.Label("Yazar Hakkında")
         @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.WriterAbout)
+        <div id="error" style="color:red">@Html.ValidationMessageFor(x => x.WriterAbout)</div>
         <br />
 
-        <button class="btn btn-info">Yazarı Ekle</button>
+        <button class="btn btn-success">Düzenle</button>
     </div>
 }
 
