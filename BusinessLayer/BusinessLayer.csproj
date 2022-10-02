@@ -67,6 +67,7 @@
     <Compile Include="notlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationRules%28FluenValidation%29\CategoryValidator.cs" />
+    <Compile Include="ValidationRules%28FluenValidation%29\WriterValidator.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
