@@ -140,6 +140,7 @@
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IstatistikController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\WriterController.cs" />
     <Compile Include="Global.asax.cs">
@@ -2286,6 +2287,7 @@
     <Content Include="Views\Writer\Index.cshtml" />
     <Content Include="Views\Writer\AddWriter.cshtml" />
     <Content Include="Views\Writer\EditWriter.cshtml" />
+    <Content Include="Views\Istatistik\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
