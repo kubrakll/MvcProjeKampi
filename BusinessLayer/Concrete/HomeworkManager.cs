@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class HomeworkManager : IHomework,IHomework2
+    public class HomeworkManager : IHomework
     {
         IHomework _homeworkdal;
-        IHomework2 _homeworkdal2;
+
 
         public HomeworkManager(IHomework homeworkdal)
         {
@@ -23,20 +23,11 @@ namespace BusinessLayer.Concrete
             return _homeworkdal.GetByID(id);
         }
 
-        
+
         public List<Category> GetListe()
         {
             return _homeworkdal.GetListe();
         }
 
-        Writer IHomework2.GetByID(int id)
-        {
-            return _homeworkdal2.GetByID(id);
-        }
-
-        List<Writer> IHomework2.GetListe()
-        {
-            return _homeworkdal2.GetListe();
-        }
     }
 }

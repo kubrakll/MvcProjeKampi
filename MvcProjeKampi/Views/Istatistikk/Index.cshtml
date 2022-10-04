@@ -1,0 +1,181 @@
+﻿@using EntityLayer.Concrete
+@model List<Heading>
+
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            margin:15px;
+        }
+
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+        .ana {
+            display:flex;
+            margin-left:15px;
+            
+        }
+        .anaa {
+            display: flex;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Index</h2>
+    <br />
+    <div class="ana">
+        <div class="card">
+            <div class="container">
+                &nbsp;
+                <h4><b>Toplam Kategori Sayısı</b></h4>
+                <p>
+                    @{
+                        int sayac = 0;
+                        foreach (var item in Model)
+                        {
+                            sayac = sayac + 1;
+
+                        }
+                        @sayac
+                    }
+                </p>
+            </div>
+        </div>
+
+        @*İkinci Kart*@
+
+        <div class="card">
+            <div class="container">
+                &nbsp;
+                <h4><b>Başlık tablosunda "yazılım" kategorisine ait başlık sayısı</b></h4>
+                <p>
+                    @{
+                        int sayac2 = 0;
+                        foreach (var item in Model)
+                        {
+                            if (item.HeadingName == "yazılım")
+                            {
+                                sayac2 += 1;
+                            }
+
+                        }
+                        @sayac2
+                    }
+                </p>
+            </div>
+        </div>
+
+        @*Üçüncü Kart*@
+
+        <div class="card">
+            <div class="container">
+                &nbsp;
+                <h4><b>Yazar Adında "a" harfi geçen yazar sayısı</b></h4>
+                <p>
+                    @{
+                        int sayac3 = 0;
+                        string a = "a";
+                        foreach (var item in Model)
+                        {
+                            bool demo = item.HeadingName.Contains(a);
+                            if (demo == true)
+                            {
+                                sayac3 += 1;
+                            }
+
+                        }
+                        @sayac3
+                    }
+                </p>
+            </div>
+        </div>
+</div>
+        @*Dördüncü Kart*@
+    <div class="anaa">
+        <div class="card">
+            <div class="container">
+                &nbsp;
+                <h4><b>En fazla başlığa sahip kategori</b></h4>
+                <p>
+
+                    @{
+                        int sayi = 0;
+                        int tekrarSayisi = 0;
+                        int geciciTekrar = 1;
+                        String denemee = "";
+                        foreach (var item in Model)
+                        {
+                            if (item.Category.CategoryID == item.Category.CategoryID + 1)
+                            {
+                                geciciTekrar++;
+                            }
+                            if (item.Category.CategoryID == (Model.Count() - 2) || item.Category.CategoryID != item.Category.CategoryID + 1)
+                            {
+                                if (geciciTekrar > tekrarSayisi)
+                                {
+                                    tekrarSayisi = geciciTekrar;
+                                    sayi = item.Category.CategoryID;
+                                }
+
+                                geciciTekrar = 1;
+                            }
+                            denemee = item.Category.CategoryName;
+                        }
+
+                        @denemee
+                    }
+                </p>
+            </div>
+        </div>
+
+
+        @*Beşinci Kart*@
+        <div class="card">
+            <div class="container">
+                &nbsp;
+                <h4><b>Kategori tablosunda durumu true olan kateforiler ile false olan kategoriler arasındaki sayısal fark</b></h4>
+                <p>
+                    @{
+                        int sumTrue = 0;
+                        int sum = 0;
+                        int fark = 0;
+
+                        foreach (var item in Model)
+                        {
+                            if (item.Category.CategoryStatus == true)
+                            {
+                                sumTrue += 1;
+
+                            }
+                            sum += 1;
+                        }
+                        fark = sum - sumTrue;
+
+
+                        @fark
+                    }
+                </p>
+            </div>
+        </div>
+
+        <br />
+    </div>
+</body>
+</html>
