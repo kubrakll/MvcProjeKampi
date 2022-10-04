@@ -8,23 +8,25 @@
 <br />
 @using (Html.BeginForm("AddHeading", "Heading", FormMethod.Post))
 {
-    <div class="form-group">
-        @Html.Label("Başlık Adı")
-        @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
-        <div id="error" style="color:red">@Html.ValidationMessageFor(x => x.HeadingName)</div>
+    <div>
+        <div class="form-group">
+            @Html.Label("Başlık Adı")
+            @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
+            <div id="error" style="color:red">@Html.ValidationMessageFor(x => x.HeadingName)</div>
 
-        <br />
-        @Html.Label("Kategori")
-        @Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control" })
-        <div id="error" style="color:red">@Html.ValidationMessageFor(x => x.CategoryID)</div>
+            <br />
+            @Html.Label("Kategori")
+            @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
 
-        <br />
-        @Html.Label("Yazar")
-        @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control" })
-        <div id="error" style="color:red">@Html.ValidationMessageFor(x => x.WriterID)</div>
-        <br />
 
-        <button class="btn btn-info">Başlık Ekle</button>
+            <br />
+            @Html.Label("Yazar")
+            @Html.DropDownListFor(x => x.WriterID, (List<SelectListItem>)ViewBag.vlw, new { @class = "form-control" })
+            <div id="error" style="color:red">@Html.ValidationMessageFor(x => x.WriterID)</div>
+            <br />
+
+            <button class="btn btn-info">Başlık Ekle</button>
+        </div>
     </div>
 }
 
