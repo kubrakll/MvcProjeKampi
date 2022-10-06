@@ -12,7 +12,8 @@ namespace MvcProjeKampi.Controllers
     {
         // GET: Istatistikk
 
-        HeadingManager hm = new HeadingManager(new EfHeadingDal()); 
+        HeadingManager hm = new HeadingManager(new EfHeadingDal());
+        
 
         public ActionResult Index()
         {

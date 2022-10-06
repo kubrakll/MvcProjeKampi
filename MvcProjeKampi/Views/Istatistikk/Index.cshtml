@@ -15,8 +15,8 @@
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.3s;
             width: 40%;
-            margin:15px;
-            background-color:#d9e5ed;
+            margin: 15px;
+            background-color: #d9e5ed;
         }
 
             .card:hover {
@@ -28,18 +28,17 @@
         }
 
         .ana {
-            display:flex;
-            margin-left:15px;
-            
+            display: flex;
+            margin-left: 15px;
         }
+
         .anaa {
             display: flex;
-            
         }
     </style>
 </head>
 <body>
-    <h2>Index</h2>
+
     <br />
     <div class="ana">
         <div class="card">
@@ -49,10 +48,17 @@
                 <p>
                     @{
                         int sayac = 0;
+ 
                         foreach (var item in Model)
                         {
-                            sayac = sayac + 1;
+                            for (int i = 0; i < item.Category.CategoryID; i++)
+                            {
+                               
+                                sayac = sayac + 1;
+                                break;
 
+                            }
+                           
                         }
                         @sayac
                     }
@@ -85,6 +91,7 @@
 
         @*Üçüncü Kart*@
 
+
         <div class="card">
             <div class="container">
                 &nbsp;
@@ -93,22 +100,26 @@
                     @{
                         int sayac3 = 0;
                         string a = "a";
+                       
                         foreach (var item in Model)
                         {
-                            bool demo = item.HeadingName.Contains(a);
-                            if (demo == true)
-                            {
-                                sayac3 += 1;
+                                bool demo = item.Writer.WriterName.Contains(a);
+                                if (demo == true)
+                                {
+                                    sayac3 += 1;
+                               
                             }
 
+                            
                         }
+
                         @sayac3
                     }
                 </p>
             </div>
         </div>
-</div>
-        @*Dördüncü Kart Doğru*@
+    </div>
+    @*Dördüncü Kart Doğru*@
     <div class="anaa">
         <div class="card">
             <div class="container">
@@ -151,7 +162,7 @@
         <div class="card">
             <div class="container">
                 &nbsp;
-                <h5><b>Kategori tablosunda durumu true olan kateforiler ile false olan kategoriler arasındaki sayısal fark</b></h5>
+                <h5><b>Kategori tablosunda durumu true olan kategoriler ile false olan kategoriler arasındaki sayısal fark</b></h5>
                 <p>
                     @{
                         int sumTrue = 0;
@@ -165,11 +176,16 @@
                                 sumTrue += 1;
 
                             }
-                            sum += 1;
+                            else
+                            {
+                                sum += 1;
+
+                            }
                         }
-                        fark = sum - sumTrue;
+                        fark = sumTrue-sum;
 
 
+                        
                         @fark
                     }
                 </p>
